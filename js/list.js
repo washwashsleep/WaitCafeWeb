@@ -2,7 +2,7 @@
 	App.View('List', {
 		options: {
 			route: '/list',
-			url: '/pages/list.html'
+			url: 'pages/list.html'
 		}
 	});
 }());

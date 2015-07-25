@@ -19,7 +19,7 @@
 		},
 		options: {
 			route: '/signin',
-			url: '/pages/signin.html'
+			url: 'pages/signin.html'
 		}
 	});
 }());

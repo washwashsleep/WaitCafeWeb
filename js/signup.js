@@ -24,7 +24,7 @@
 		},
 		options: {
 			route: '/signup',
-			url: '/pages/signup.tpl'
+			url: 'pages/signup.tpl'
 		}
 	});
 }());

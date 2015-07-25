@@ -2,7 +2,7 @@
 	App.View('Item', {
 		options: {
 			route: '/item/{{id}}',
-			url: '/pages/item.html'
+			url: 'pages/item.html'
 		}
 	});
 }());
