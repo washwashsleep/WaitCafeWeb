@@ -1,56 +1,26 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>jsblocks • TodoMVC</title>
-		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
-	</head>
-	<body>
-		<section data-query="view(Todos)" class="todoapp">
-			<header class="header">
-				<h1>todos</h1>
-				<input data-query="val(newTodo.title).keydown(addTodo)" class="new-todo" placeholder="What needs to be done?" autofocus>
-			</header>
-			<section data-query="visible(todos().length > 0)" class="main">
-				<input data-query="checked(todos.remaining() == 0).click(todos.toggleAll)" class="toggle-all" type="checkbox">
-				<label for="toggle-all">Mark all as complete</label>
-				<ul data-query="each(todos.view)" class="todo-list">
-					<li data-query="setClass('completed', completed).setClass('editing', editing).dblclick(edit)">
-						<div class="view">
-							<input data-query="checked(completed).click(toggleComplete)" class="toggle" type="checkbox">
-							<label>{{title}}</label>
-							<button data-query="click(destroy)" class="destroy"></button>
-						</div>
-						<input data-query="val(title).keydown(handleAction).blur(closeEdit).focused(editing)" class="edit" />
-					</li>
-				</ul>
-			</section>
-			<footer data-query="visible(todos().length > 0)" class="footer">
-				<span class="todo-count"><strong>{{todos.remaining}}</strong> item left</span>
-				<ul class="filters">
-					<li>
-						<a data-query="setClass('selected', filter() == 'all')" href="#/">All</a>
-					</li>
-					<li>
-						<a data-query="setClass('selected', filter() == 'active')" href="#/active">Active</a>
-					</li>
-					<li>
-						<a data-query="setClass('selected', filter() == 'completed')" href="#/completed">Completed</a>
-					</li>
-				</ul>
-				<button data-query="visible(todos().length != todos.remaining()).click(todos.clearCompleted)" class="clear-completed">
-					Clear completed
-				</button>
-			</footer>
-		</section>
-		<footer class="info">
-			<p>Double-click to edit a todo</p>
-			<p>Created by <a href="https://github.com/astoilkov">Antonio Stoilkov</a></p>
-			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
-		</footer>
-		<script src="node_modules/blocks/blocks.js"></script>
-		<script src="node_modules/todomvc-common/base.js"></script>
-		<script src="js/app.js"></script>
-	</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wait Cafe</title>
+  </head>
+  <body>
+  	<a href="#">Home</a>
+  	<a href="#signup">signup</a>
+		<a href="#signin">signin</a>
+		<a href="#list">list</a>
+		<a href="#item">item</a>
+		<div data-query="view(Home)"></div>
+		<div data-query="view(Signin)"></div>
+		<div data-query="view(Signup)"></div>
+		<div data-query="view(List)"></div>
+		<div data-query="view(Item)"></div>
+    <script src="js/blocks.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/signin.js"></script>
+    <script src="js/signup.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/item.js"></script>
+  </body>
 </html>
