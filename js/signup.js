@@ -7,12 +7,12 @@
 		gender: App.Property({
 			defaultValue: 'BOY'
 		}),
-	  options: {
-	    idAttr: 'id',
-	    create: {
-	      url: App.api + 'user'
-	    }
-	  }
+		options: {
+			idAttr: 'id',
+			create: {
+				url: App.api + 'user'
+			}
+		}
 	});
 
 
