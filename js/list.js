@@ -1,5 +1,19 @@
 (function() {
-	var Recommendation = App.Collection({
+
+	var Item = App.Model({
+		selected: App.Property(),
+		init: function() {
+			var collection = this.collection();
+			if (collection) {
+				this.selected.on('change', collection.save);
+			}
+		},
+		toggleSelection: function() {
+			this.selected(!this.selected());
+		}
+	});
+
+	var Recommendation = App.Collection(Item, {
 		coordinates: App.Property({
 			defaultValue: '25.041399,121.554233'
 		}),
@@ -7,10 +21,13 @@
 			defaultValue: 20
 		}),
 		limit: App.Property({
-			defaultValue: 5
+			defaultValue: 10
 		}),
 		keyword: App.Property({
 			defaultValue: 'cafe'
+		}),
+		selected: App.Property({
+			defaultValue: false
 		}),
 		options: {
 			read: {
@@ -35,10 +52,20 @@
 			route: 'list/{{type}}',
 			url: 'pages/list.html'
 		},
+		init: function() {
+			this.isRecommendation = false;
+			this.isFavorite = false;
+		},
 		recommendation: Recommendation(),
 		favorite: Favorite(),
 		routed: function(params) {
 			this.list = this[params.type].read();
+			this.setTypeFlag(params.type, true);
+		},
+		setTypeFlag: function(type, bool) {
+			var capType = type.charAt(0).toUpperCase() + type.slice(1);
+			return this['is' + capType] = bool;
 		}
 	});
+
 }());

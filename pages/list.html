@@ -1,7 +1,11 @@
+<style>
+	li.selected {
+		background-color: whitesmoke;
+	}
+</style>
 <ul data-query="each(list)">
-	<li>
-		{{id}}
-		{{name}}
+	<li data-query="click(toggleSelection).setClass('selected', selected)">
+		<h3>{{name}}</h3>
 		<p>{{category}}</p>
 	</li>
 </ul>
