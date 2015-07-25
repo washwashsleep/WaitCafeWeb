@@ -12,37 +12,35 @@
 		max-width: 450px;
 	}
 </style>
-<div class="ui middle aligned center aligned grid" style="background:url(https://farm1.staticflickr.com/509/18751690690_507a67c3aa_o.jpg) center center;background-size:cover">
-	<div class="column">
-		<h2 class="ui teal image header">
-			<!-- <img src="assets/images/logo.png" class="image"> -->
-			<div class="content" style="color:#fff;font-size:80px;margin-bottom:25px;font-family: 'Dancing Script', cursive;text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7)">
-				Wait Cafe
-			</div>
-		</h2>
-		<form data-query="submit(userSignin)" class="ui large form">
-			<div class="ui stacked segment">
-				<div class="field">
-					<div class="ui left icon input">
-						<i class="user icon"></i>
-						<input data-query="val(user.email)" name="email" placeholder="E-mail">
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui left icon input">
-						<i class="lock icon"></i>
-						<input data-query="val(user.password)" type="password" name="password" placeholder="Password">
-					</div>
-				</div>
-				<button class="ui fluid large teal submit button">登入</button>
-			</div>
-
-			<div class="ui error message"></div>
-
-		</form>
-
-		<div class="ui message">
-			加入我們? <a href="#signup">註冊</a>
+<div class="column">
+	<h2 class="ui teal image header">
+		<!-- <img src="assets/images/logo.png" class="image"> -->
+		<div class="content" style="color:#fff;font-size:80px;margin-bottom:25px;font-family: 'Dancing Script', cursive;text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7)">
+			Wait Cafe
 		</div>
+	</h2>
+	<form data-query="submit(userSignin)" class="ui large form">
+		<div class="ui stacked segment">
+			<div class="field">
+				<div class="ui left icon input">
+					<i class="user icon"></i>
+					<input data-query="val(user.email)" name="email" placeholder="E-mail">
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui left icon input">
+					<i class="lock icon"></i>
+					<input data-query="val(user.password)" type="password" name="password" placeholder="Password">
+				</div>
+			</div>
+			<button class="ui fluid large teal submit button">登入</button>
+		</div>
+
+		<div class="ui error message"></div>
+
+	</form>
+
+	<div class="ui message">
+		加入我們? <a href="#signup">註冊</a>
 	</div>
 </div>
