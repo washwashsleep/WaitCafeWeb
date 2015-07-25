@@ -21,22 +21,35 @@
     <link rel="stylesheet" type="text/css" href="js/semantic-ui/components/list.css">
     <link rel="stylesheet" type="text/css" href="js/semantic-ui/components/message.css">
     <link rel="stylesheet" type="text/css" href="js/semantic-ui/components/icon.css">
-    <!-- // <script src="js/jquery/jquery.min.js"></script> -->
-    <!-- // <script src="js/semantic-ui/components/form.js"></script> -->
-    <!-- // <script src="js/semantic-ui/components/transition.js"></script> -->
-
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/semantic-ui/components/form.js"></script>
+    <script src="js/semantic-ui/components/transition.js"></script>
+    <style>
+        div[data-query]{
+          height: 100%;
+        }
+        div[data-query] > div{
+          height: 100%;
+        }
+        nav {
+          position: absolute;
+          top:0;
+        }
+    </style>
   </head>
   <body>
-  	<a href="#">Home</a>
-  	<a href="#signup">signup</a>
-		<a href="#signin">signin</a>
-		<a href="#list">list</a>
-		<a href="#item">item</a>
-		<div data-query="view(Home)"></div>
-		<div data-query="view(Signin)"></div>
-		<div data-query="view(Signup)"></div>
-		<div data-query="view(List)"></div>
-		<div data-query="view(Item)"></div>
+    <nav>
+    	<a class="ui secondary button" href="#">Home</a>
+    	<a class="ui secondary button" href="#signup">signup</a>
+    	<a class="ui secondary button" href="#signin">signin</a>
+    	<a class="ui secondary button" href="#list">list</a>
+    	<a class="ui secondary button" href="#item">item</a>
+  	</nav>
+    <div data-query="view(Home)"></div>
+  	<div data-query="view(Signin)"></div>
+  	<div data-query="view(Signup)"></div>
+  	<div data-query="view(List)"></div>
+  	<div data-query="view(Item)"></div>
     <script src="js/blocks.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/home.js"></script>
