@@ -17,14 +17,14 @@
 
 
 	App.View('Signup', {
+		options: {
+			route: 'signup',
+			url: 'pages/signup.html'
+		},
 		profile: Profile(),
 		createUser: function(event) {
 			event.preventDefault();
 			this.profile.sync();
-		},
-		options: {
-			route: '/signup',
-			url: 'pages/signup.html'
 		}
 	});
 }());
