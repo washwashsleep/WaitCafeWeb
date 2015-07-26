@@ -24,7 +24,15 @@
 		profile: Profile(),
 		createUser: function(event) {
 			event.preventDefault();
-			this.profile.sync();
+
+			var view = this;
+
+			this.profile.sync(function(data) {
+				if(data._id) {
+					App._userId = data._id;
+					view.route('list/recommendation');
+				}
+			});
 		}
 	});
 }());
