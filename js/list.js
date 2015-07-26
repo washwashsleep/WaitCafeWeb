@@ -59,6 +59,7 @@
 		recommendation: Recommendation(),
 		favorite: Favorite(),
 		routed: function(params) {
+
 			this.list = this[params.type].read();
 			this.setTypeFlag(params.type, true);
 		},

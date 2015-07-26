@@ -1,11 +1,38 @@
 <style>
-	li.selected {
+	tr.selected {
 		background-color: whitesmoke;
 	}
 </style>
-<ul data-query="each(list)">
+<div class="column">
+  <table class="ui celled padded table">
+    <thead>
+      <tr><th class="single line">Item</th>
+      <th>Name</th>
+      <th>類型</th>
+      <th>推薦數</th>
+    </tr></thead>
+    <tbody data-query="each(list)">
+      <tr data-query="click(toggleSelection).setClass('selected', selected)">
+        <td>
+          <h2 class="ui center aligned header">{{$index}}</h2>
+        </td>
+        <td class="single line">
+          {{name}}
+        </td>
+        <td class="aligned">
+          {{category}}
+        </td>
+        <td>
+          {{checkins}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="ui primary button">收藏</button>
+</div>
+<!-- <ul data-query="each(list)">
 	<li data-query="click(toggleSelection).setClass('selected', selected)">
 		<h3>{{name}}</h3>
 		<p>{{category}}</p>
 	</li>
-</ul>
+</ul> -->
