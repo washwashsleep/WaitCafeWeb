@@ -31,7 +31,7 @@
 		}),
 		options: {
 			read: {
-				url: App.api + 'favorite/recommend'
+				// url: App.api + 'favorite/recommend'
 			}
 		}
 	});
