@@ -1,44 +1,45 @@
-<div class="column">
-  <h2 class="ui teal image header">
-    <div class="content" style="color:#fff;font-size:80px;margin-bottom:25px;font-family: 'Dancing Script', cursive;text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7)">
-      Wait Cafe
-    </div>
-  </h2>
-  <form data-query="submit(createUser)" class="ui form segment">
-    <p>建立帳號</p>
-    <div class="two fields">
-        <div class="field">
-            <label>姓名</label>
-            <input data-query="val(profile.name)" placeholder="Name" name="name" type="text">
-        </div>
-        <div class="field">
-            <label>性別</label>
-            <select data-query="val(profile.gender)" class="ui dropdown" name="gender">
-                <option value="">性別</option>
-                <option value="male">男</option>
-                <option value="female">女</option>
-            </select>
-        </div>
-    </div>
-    <div class="two fields">
-        <div class="field">
-            <label>email（主要帳號）</label>
-            <input data-query="val(profile.email)" placeholder="email" name="email" type="text">
-        </div>
-        <div class="field">
-            <label>Phone</label>
-            <input data-query="val(profile.phone)" type="text" name="phone">
-        </div>
-    </div>
-    <div class="field">
-      <label>密碼</label>
-      <input data-query="val(profile.password)" type="password" name="password">
-    </div>
-    <button class="ui blue submit button">提交</button>
-    <div class="ui error message"></div>
-  </form>
+<div class="ui middle aligned center aligned grid" style="background:url(./images/18751690690_507a67c3aa_o.jpg) center center;background-size:cover">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <div class="content" style="color:#fff;font-size:80px;margin-bottom:25px;font-family: 'Dancing Script', cursive;text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7)">
+        Wait Cafe
+      </div>
+    </h2>
+    <form data-query="submit(createUser)" class="ui form segment">
+      <p>建立帳號</p>
+      <div class="two fields">
+          <div class="field">
+              <label>姓名</label>
+              <input data-query="val(profile.name)" placeholder="Name" name="name" type="text">
+          </div>
+          <div class="field">
+              <label>性別</label>
+              <select data-query="val(profile.gender)" class="ui dropdown" name="gender">
+                  <option value="">性別</option>
+                  <option value="male">男</option>
+                  <option value="female">女</option>
+              </select>
+          </div>
+      </div>
+      <div class="two fields">
+          <div class="field">
+              <label>email（主要帳號）</label>
+              <input data-query="val(profile.email)" placeholder="email" name="email" type="text">
+          </div>
+          <div class="field">
+              <label>Phone</label>
+              <input data-query="val(profile.phone)" type="text" name="phone">
+          </div>
+      </div>
+      <div class="field">
+        <label>密碼</label>
+        <input data-query="val(profile.password)" type="password" name="password">
+      </div>
+      <button class="ui blue submit button">提交</button>
+      <div class="ui error message"></div>
+    </form>
+  </div>
 </div>
-
 <!-- <form data-query="submit(createUser)">
 	name: <input data-query="val(profile.name)" type="text"><br>
 	password: <input data-query="val(profile.password)" type="password"><br>

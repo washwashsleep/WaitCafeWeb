@@ -1,34 +1,35 @@
 <style>
 	tr.selected {
-		background-color: whitesmoke;
+		background-color: #c9ba9b;
 	}
 </style>
-<div class="column">
-  <table class="ui celled padded table">
-    <thead>
-      <tr><th class="single line">Item</th>
-      <th>Name</th>
-      <th>類型</th>
-      <th>推薦數</th>
-    </tr></thead>
-    <tbody data-query="each(list)">
-      <tr data-query="click(toggleSelection).setClass('selected', selected)">
-        <td>
-          <h2 class="ui center aligned header">{{$index}}</h2>
-        </td>
-        <td class="single line">
-          {{name}}
-        </td>
-        <td class="aligned">
-          {{category}}
-        </td>
-        <td>
-          {{checkins}}
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <button class="ui primary button">收藏</button>
+<div class="ui middle aligned center aligned grid" style="background:url(./images/18751690690_507a67c3aa_o.jpg) center center;background-size:cover">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <div class="content" style="color:#fff;font-size:80px;margin-bottom:25px;font-family: 'Dancing Script', cursive;text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7)">
+        Wait Cafe
+      </div>
+    </h2>
+    <table class="ui celled padded table">
+      <tbody data-query="each(list)">
+        <tr data-query="click(toggleSelection).setClass('selected', selected)">
+          <td>
+            <h2 class="ui center aligned header">{{$index}}</h2>
+          </td>
+          <td class="single line">
+            {{name}}
+          </td>
+          <td class="aligned">
+            {{category}}
+          </td>
+          <td>
+            打卡數: {{checkins}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="ui primary button">收藏</button>
+  </div>
 </div>
 <!-- <ul data-query="each(list)">
 	<li data-query="click(toggleSelection).setClass('selected', selected)">

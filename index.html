@@ -27,8 +27,14 @@
     <link rel="stylesheet" type="text/css" href="js/semantic-ui/components/statistic.css">
     <link rel="stylesheet" type="text/css" src="js/semantic-ui/semantic.min.css">
     <style>
+        div[data-query] {
+          height: 100%;
+        }
+        div[data-query] > div{
+          height: 100%;
+        }
         body {
-          background-color: #DADADA;
+          /*background-color: #DADADA;*/
           padding-top: 55px;
         }
 
@@ -43,25 +49,350 @@
         .column {
           max-width: 450px;
         }
+        .page {
+            min-height: 100%;
+        }
+        @media all and (min-width: 48em) {
+            .root,.root--flush {
+                padding-top:58px;
+            }
+        }
+        .root,.root--flush {
+            padding-top: 58px;
+            min-height: 100%;
+            /*padding-bottom: 95.7px;*/
+        }
+        .standard-img {
+            background-image: url(http://bossfight.co/wp-content/uploads/2015/07/bossfight-stock-images-photos-photography-free-high-resolution-headphones.jpg)
+        }
+        .standard-img,.standard-bn {
+           /* height: 320px;*/
+            padding-top: 100px;
+            background-color: #fff;
+            background-position: 0 top;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover cover;
+            background-size: cover;
+            border-bottom: 1px solid #d2d2d2;
+            position: relative
+        }
+
+        .card_number,.card_desc,.card_img {
+            display: table-cell;
+            vertical-align: middle
+        }
+        .card_img {
+            display: none!important
+            }
+        @media screen and (min-width: 640px) {
+            .standard-img,.standard-bn {
+                height:360px
+            }
+
+        }
+
+        @media screen and (min-width: 768px) {
+            .standard-img,.standard-bn {
+               /* -webkit-background-size:auto 360px;
+                background-size: auto 360px*/
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .standard-img,.standard-bn {
+             /*   height:480px;
+                -webkit-background-size: auto 500px;
+                background-size: auto 500px*/
+            }
+        }
+        .wrapper-fluid,.fluid-wrapper {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 22px;
+            padding-right: 22px;
+            max-width: 1200px;
+        }
+        .content_side--right {
+            float: right;
+            margin-right: 0
+        }
+        @media all and (min-width: 48em) {
+            .content_side {
+                text-align:left;
+                position: static;
+                color: inherit;
+                background-color: transparent;
+                max-width: 50%;
+            }
+        }
+        .content_side {
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 22px;
+            background-color: rgba(255,255,255,0.9);
+        }
+        @media all and (min-width: 48em) {
+            .content_side {
+                text-align:left;
+                position: static;
+                color: inherit;
+                background-color: transparent;
+                max-width: 50%;
+            }
+        }
+        .highlight {
+            background: none;
+            color: #aa1528;
+            display: inline-block;
+            font-size: 2em;
+            letter-spacing: 1px;
+            padding: 12px 24px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .giant-heading {
+            font-family: georgia,serif;
+            font-size: 3.25em
+        }
+
+        @media screen and (min-width: 1024px) {
+            .giant-heading {
+                font-size:6em
+            }
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: 300;
+            margin-bottom: 11px;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: 500;
+            line-height: 1;
+        }
+        h1,.alpha {
+            line-height: 42px;
+        }
+        html {
+            font: 0.9375em/1.46667 "Lato",HelveticaNeue,Helvetica,Arial,Sans;
+            min-height: 100%;
+        }
+        .pad-vert-medium {
+            background: #fff;
+            padding-top: 44px;
+            padding-bottom: 44px;
+        }
+        .info-card__list {
+            list-style: none;
+            margin: 0 auto;
+            max-width: 768px;
+            width: 95%
+        }
+        .info-card__list li {
+            background: #fff;
+            border: 1px solid #d2d2d2;
+            border-radius: 2px;
+            margin-bottom: 36px
+        }
+
+        .card_content {
+            display: table;
+            padding: 24px
+        }
+
+        .card_number,.card_desc,.card_img {
+            display: table-cell;
+            vertical-align: middle
+        }
+
+        .card_number {
+            border-right: 1px solid #d2d2d2;
+            color: #aa1528;
+            font-size: 1.5em;
+            font-weight: 700;
+            padding-right: 18px;
+            text-align: center;
+            vertical-align: top
+        }
+
+        @media screen and (min-width: 640px) {
+            .card_number {
+                font-size:3em;
+                vertical-align: middle
+            }
+        }
+        @media screen and (min-width: 640px) {
+            .info-card__list {
+                width:75%
+            }
+        }
+        @media screen and (min-width: 640px) {
+            .card_desc {
+                padding:0 24px
+            }
+        }
+        .card_desc .card_heading {
+            color: #aa1528
+        }
+
+        .card_desc .card_copy {
+            font-size: 16px;
+            line-height: 1.65
+        }
+
+        .info-card__list {
+            list-style: none;
+            margin: 0 auto;
+            max-width: 768px;
+            width: 95%
+        }
+        /*  ------*/
+        .card_default {
+            background-image: url(http://i2.wp.com/bossfight.co/wp-content/uploads/2015/04/boss-fight-stock-images-photos-free-photography-feet-cafe.jpg?zoom=2&resize=1370%2C771);
+            background-size:100%;
+
+        }
+        @media all and (min-width: 30em) {
+            .mini-hero-section,.card_default,.mini-hero--experience {
+                background-position:-120px 0;
+            }
+        }
+        .card_title {
+            margin-bottom: 22px;
+            color: #fff;
+        }
+        .mini-hero-section,.card_default,.mini-hero--experience {
+            background-color: #9B2629;
+            color: #fff;
+            text-align: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .card_title {
+            margin-bottom: 22px;
+            color: #fff;
+        }
+        .vert-large {
+            padding-top: 55px;
+            padding-bottom: 55px;
+        }
+        .light-framed-link {
+            color: #fff;
+        }
+
+        .action-framed-link + .action-framed-link {
+            margin-left: 11px;
+        }
+        .dark-framed-link, .action-framed-link, .light-framed-link {
+            display: inline-block;
+            border: 1px solid;
+            text-transform: uppercase;
+            line-height: 1;
+            font-size: 11px;
+            font-size: 0.73333rem;
+            padding: 13px 26px;
+            font-weight: bold;
+        }
+
+        .dark-framed-link {
+            color: #000;
+        }
+
+        .action-framed-link {
+            color: #b63233;
+            border-radius: 2px;
+        }
     </style>
   </head>
   <body>
     <div class="ui fixed inverted menu">
       <div class="ui container">
-        <a href="#" class="item">Home</a>
-        <a class="item" href="#signin">signin</a>
-        <a class="item" href="#signup">signup</a>
+        <a href="#" class="item">首頁</a>
+        <a class="item" href="#signin">登入</a>
+        <a class="item" href="#signup">註冊</a>
         <a class="item" href="#list">list</a>
         <a class="item" href="#item">item</a>
       </div>
     </div>
-    <div class="ui middle aligned center aligned grid" style="background:url(https://farm1.staticflickr.com/509/18751690690_507a67c3aa_o.jpg) center center;background-size:cover">
-      <div data-query="view(Home)"></div>
-    	<div data-query="view(Signin)"></div>
-    	<div data-query="view(Signup)"></div>
-    	<div data-query="view(List)"></div>
-    	<div data-query="view(Item)"></div>
+    <div data-query="view(Home)">
+    <div class="root page" style="margin-top:-80px">
+    <div class="standard-img"><!-- add bg image -->
+        <div class="wrapper-fluid wrapper--flush">
+            <div class="content_side content_side--right">
+                <h2 class="highlight hightop" style="color:#FFFFBB">找朋友,找戀人,找情人,單身</h2>
+                <h1 class="giant-heading" style="color:#fff;font-family: 'Dancing Script', cursive;text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7)">Wait Cafe</h1>
+            </div>
+        </div>
     </div>
+      <section class="pad-vert-medium">
+        <ul class="info-card__list">
+                <li>
+                    <div class="card_content">
+                        <div class="card_number">1</div>
+                        <div class="card_desc">
+                            <h3 class="card_heading">尋找一杯咖啡優惠</h3>
+                            <p class="card_copy">每一天，從一杯美好咖啡開始。感受當下的美好時光，喝一口美好。</p>
+                        </div>
+                        <div class="card_img">
+                           <!--  <img src="https://seekarr.s3.amazonaws.com/site_images/daddy-finding-balance.jpg" alt="Varied Sugar Needs - Sugar Baby at dinner with her Sugar Daddy"> -->
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card_content">
+                        <div class="card_number">2</div>
+                        <div class="card_desc">
+                            <h3 class="card_heading">群體動物</h3>
+                            <p class="card_copy">人是群體動物，交友從古至今都是重要活動
+從看照片相親、大學聯誼、寫信交筆友、電話交友聊天室奇摩交友、AIO到現在智慧型手機百花齊放的各種APP如首圖所示，只是工具不同而已
+
+</p>
+                        </div>
+                        <div class="card_img">
+                            <!-- <img src="https://seekarr.s3.amazonaws.com/site_images/daddy-make-time.jpg" alt="Varied Sugar Needs - Sugar Baby at dinner with her Sugar Daddy"> -->
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card_content">
+                        <div class="card_number">3</div>
+                        <div class="card_desc">
+                            <h3 class="card_heading">遇見</h3>
+                            <p class="card_copy">遇見成熟紳士男！旅遊、購物，約會 輕鬆安排沒有牽絆，定制各取所需的愛</p>
+                        </div>
+                        <div class="card_img">
+                            <!-- <img src="https://seekarr.s3.amazonaws.com/site_images/daddy-terms.jpg" alt="Varied Sugar Needs - Sugar Baby at dinner with her Sugar Daddy"> -->
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card_content">
+                        <div class="card_number">4</div>
+                        <div class="card_desc">
+                            <h3 class="card_heading">努力工作</h3>
+                            <p class="card_copy">擁有一杯咖啡的時間</p>
+                        </div>
+                        <div class="card_img">
+                           <!--  <img src="http://i2.wp.com/bossfight.co/wp-content/uploads/2015/04/boss-fight-stock-images-photos-free-photography-feet-cafe.jpg?zoom=2&resize=1370%2C771" alt=""> -->
+                        </div>
+                    </div>
+                </li>
+        </ul>
+    </section>
+    <div class="card_default vert-large">
+        <h2 class="card_title">在Wait Cafe，找到您所期待的交往關係</h2>
+        <a class="light-framed-link" href="#">立即免費加入</a>
+    </div>
+    </div>
+    </div>
+  	<div data-query="view(Signin)"></div>
+  	<div data-query="view(Signup)"></div>
+  	<div data-query="view(List)"></div>
+  	<div data-query="view(Item)"></div>
     <script src="js/blocks.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/home.js"></script>
